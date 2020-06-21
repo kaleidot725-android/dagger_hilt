@@ -1,3 +1,5 @@
 package jp.kaleidot725.sample
 
-class FooService()
+interface FooService {
+    fun bar()
+}
