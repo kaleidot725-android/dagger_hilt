@@ -1,17 +1,17 @@
-package jp.kaleidot725.sample
+package jp.kaleidot725.sample.ui
 
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.PersistableBundle
 import dagger.hilt.android.AndroidEntryPoint
+import jp.kaleidot725.sample.R
+import jp.kaleidot725.sample.model.FooUsecase
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
-    @Inject lateinit var adapter: FooAdapter
+    @Inject lateinit var usecase: FooUsecase
 
     override fun onResume() {
         super.onResume()
-        adapter.bar()
+        usecase.print("MainActivity", "Event")
     }
 }
