@@ -20,7 +20,7 @@ abstract class ApplicationBindsModule {
 @InstallIn(ApplicationComponent::class)
 object ApplicationProvidesModule {
     @Provides
-    fun provideFooAdapter(fooService: FooService) : FooUsecase {
+    fun provideFooUseCase(fooService: FooService) : FooUsecase {
         return FooUsecase(fooService)
     }
 }
